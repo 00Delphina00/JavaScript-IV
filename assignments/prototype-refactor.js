@@ -30,7 +30,7 @@ function GameObject (attributes) {
 * takeDamage() // prototype method -> returns the string '<object name> took damage.'
 * should inherit destroy() from GameObject's prototype
 */
-
+/*
 function CharacterStats(charStats){
   GameObject.call(this, charStats);
   this.healthPoints = charStats.healthPoints;
@@ -50,6 +50,7 @@ CharacterStats.prototype = Object.create(GameObject.prototype);
 * should inherit destroy() from GameObject through CharacterStats
 * should inherit takeDamage() from CharacterStats
 */
+/*
 function Humanoid (attributes){
 CharacterStats.call(this, attributes);
 this.team = attributes.team;
@@ -70,7 +71,7 @@ Humanoid.prototype = Object.create(CharacterStats.prototype);
 
 // Test you work by un-commenting these 3 objects and the list of console logs below:
 
-
+/*
 const mage = new Humanoid({
 createdAt: new Date(),
 dimensions: {
@@ -131,6 +132,8 @@ console.log(archer.language); // Elvish
 console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+
+
 
 
 // Stretch task: 
