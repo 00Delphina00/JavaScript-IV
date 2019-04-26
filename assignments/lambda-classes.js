@@ -46,6 +46,12 @@ class Student extends Person {
     };
     listsSubjects(){
         console.log(`${this.name}'s favorite subjects are ${this.favSubjects}.`);
+    };
+    PRAssignment(subject){
+        console.log(`${this.name} has submitted a PR for ${subject}`);
+    }
+    springChallenge(subject){
+        console.log(`${this.name} has begun sprint challenge on {subject}.`);
     }
 }
 
