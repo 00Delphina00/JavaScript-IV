@@ -28,20 +28,13 @@ class Instructor extends Person {
     };
 
 }
-const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    gender: 'male',
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
-  });
+
 //Student class
 class Student extends Person {
     constructor(newObjects){
         super(newObjects);
         this.previousBackground = newObjects.previousBackground;
+        this.className = newObjects.className
         this.favSubjects = newObjects.favSubjects;
     };
     listsSubjects(){
@@ -54,6 +47,16 @@ class Student extends Person {
         console.log(`${this.name} has begun sprint challenge on {subject}.`);
     }
 }
+
+const fred = new Student({
+    name: 'Fred',
+    location: 'Bedrock',
+    age: 37,
+    gender: 'male',
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Don't forget the homies`
+  });
 
   console.log(fred);
   fred.speak();
