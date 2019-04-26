@@ -43,8 +43,8 @@ class Student extends Person {
     PRAssignment(subject){
         console.log(`${this.name} has submitted a PR for ${subject}`);
     }
-    springChallenge(subject){
-        console.log(`${this.name} has begun sprint challenge on {subject}.`);
+    sprintChallenge(subject){
+        console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
 }
 
@@ -64,3 +64,5 @@ const fred = new Student({
   console.log(fred);
   fred.speak();
   fred.listsSubjects();
+  fred.PRAssignment("math");
+  fred.sprintChallenge("Array Methods");
