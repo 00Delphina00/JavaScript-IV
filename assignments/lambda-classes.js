@@ -58,10 +58,19 @@ class ProjectManager extends Instructor{
      standup(channel){
           console.log(`${this.name} announces to ${channel}, @channel standy times!`);
      }
+     debugsCode(studentObject, subject){
+         console.log(`${this.name} debugs ${studentObject.name}'s code on ${subject}`);
+
+     }
 }
 
 //to test change the class name on new for the fred object and quote out
 // any methods that the changed class does not have.
+const student = new Student({
+    name:"Scarlett",
+    grade: "89"
+})
+
 const fred = new ProjectManager({
     name: 'Fred',
     location: 'Bedrock',
@@ -78,6 +87,19 @@ const fred = new ProjectManager({
   console.log(fred);
   fred.speak();
   fred.standup("WebPT6");
+  fred.debugsCode(student, "Javascript");
+  Student.prototype.grade = function(grade){
+      let tempObj = {};
+      if(grade > 1 && grade <100){
+        let tempObj = grade;
+        return tempObj;
+      }
+      Object.assign(this, tempObj);
+  }
+  
+  console.log(student.grade(89));
+  console.log(student);
+  
  /*console.log(fred.catchphrase);
    console.log("Delphina replies to fred's catchphrase saying,"Word...What's good?");
   fred.grade("math");
