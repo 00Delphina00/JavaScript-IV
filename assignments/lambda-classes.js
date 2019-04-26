@@ -55,12 +55,12 @@ const fred = new Student({
     gender: 'male',
     favLanguage: 'JavaScript',
     specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+    catchPhrase: `Don't forget the homies`,
+    previousBackground: "Mining Operations",
+    className: 'Full Stack Web Development',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
   });
 
   console.log(fred);
   fred.speak();
-  fred.demo("math");
-  fred.grade("math");
-  console.log(fred.catchPhrase);
-  console.log(`Delphina replies saying, "Word.......What's good?"`);
+  fred.listsSubjects();
