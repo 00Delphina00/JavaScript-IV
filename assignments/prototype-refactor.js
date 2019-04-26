@@ -22,8 +22,13 @@ function GameObject (attributes) {
          return `${this.name} was removed from the game.`;
     };
 }
-
-
+class GameObject2 extends GameObject {
+      constructor(attributes){
+          super(attributes);
+      };
+}
+const Nami = new GameObject({name:"Nami"})
+console.log(Nami.destroy());
 /*
 === CharacterStats ===
 * healthPoints
@@ -132,7 +137,7 @@ console.log(archer.language); // Elvish
 console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
-
+*/
 
 
 
