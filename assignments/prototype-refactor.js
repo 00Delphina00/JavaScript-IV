@@ -78,8 +78,7 @@ class Humanoid2 extends Humanoid {
 
     }
 }
-const Nami = new Humanoid2({name:"Nami", healthPoints:100,language:"Ancient Sumerian"});
-console.log(Nami.takeDamage() + Nami.greet());
+
 /*
 * Inheritance chain: GameObject -> CharacterStats -> Humanoid
 * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
@@ -88,8 +87,8 @@ console.log(Nami.takeDamage() + Nami.greet());
 
 // Test you work by un-commenting these 3 objects and the list of console logs below:
 
-/*
-const mage = new Humanoid({
+
+const mage = new Humanoid2({
 createdAt: new Date(),
 dimensions: {
   length: 2,
@@ -105,7 +104,7 @@ weapons: [
 language: 'Common Tongue',
 });
 
-const swordsman = new Humanoid({
+const swordsman = new Humanoid2({
 createdAt: new Date(),
 dimensions: {
   length: 2,
@@ -122,7 +121,7 @@ weapons: [
 language: 'Common Tongue',
 });
 
-const archer = new Humanoid({
+const archer = new Humanoid2({
 createdAt: new Date(),
 dimensions: {
   length: 1,
@@ -149,7 +148,7 @@ console.log(archer.language); // Elvish
 console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
-*/
+
 
 
 
