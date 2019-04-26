@@ -11,8 +11,24 @@ class Person {
         console.log(`Hello my name is ${this.name}, I am from ${this.location}.`);
     };
 }
+//Instructor class is the child inheriting from the Parent class
+//called Person.
+class Instructor extends Person {
+    constructor(newObjects){
+        super(newObjects);
+        this.specialty = newObjects.specialty;
+        this.favLanguage = newObjects.favLanguage;
+        this.catchPhrase = "Dont forget the homies";
+    };
+    demo(subject){
+        console.log(`Today we are learning about ${subject}.`);
+    };
+    grade(subject){
+        console.log(`${this.name} receives a perfect score on ${subject}.`);
+    };
 
-const fred = new Person({
+}
+const fred = new Instructor({
     name: 'Fred',
     location: 'Bedrock',
     age: 37,
@@ -23,3 +39,5 @@ const fred = new Person({
   });
 
   fred.speak();
+  fred.demo("math");
+  fred.grade("math");
