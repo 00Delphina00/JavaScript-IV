@@ -27,15 +27,14 @@ class GameObject2 extends GameObject {
           super(attributes);
       };
 }
-const Nami = new GameObject({name:"Nami"})
-console.log(Nami.destroy());
+
 /*
 === CharacterStats ===
 * healthPoints
 * takeDamage() // prototype method -> returns the string '<object name> took damage.'
 * should inherit destroy() from GameObject's prototype
 */
-/*
+
 function CharacterStats(charStats){
   GameObject.call(this, charStats);
   this.healthPoints = charStats.healthPoints;
@@ -46,6 +45,13 @@ function CharacterStats(charStats){
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
 
+class CharacterStats2 extends CharacterStats{
+     constructor(charStats){
+         super(charStats);
+     }
+}
+const Nami = new CharacterStats2({name:"Nami", healthPoints: 150});
+console.log(`Nami has ${Nami.healthPoints} health points + ${Nami.takeDamage()}`);
 /*
 === Humanoid (Having an appearance or character resembling that of a human.) ===
 * team
