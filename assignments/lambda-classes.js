@@ -47,9 +47,22 @@ class Student extends Person {
         console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
 }
+//Project Manager class
+
+class ProjectManager extends Instructor{
+     constructor(newObjects){
+         super(newObjects);
+         this.gradClassName = newObjects.gradClassName;
+         this.favInstructor = newObjects.favInstructor;
+     }
+     standup(channel){
+          console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+     }
+}
+
 //to test change the class name on new for the fred object and quote out
 // any methods that the changed class does not have.
-const fred = new Student({
+const fred = new ProjectManager({
     name: 'Fred',
     location: 'Bedrock',
     age: 37,
@@ -64,6 +77,7 @@ const fred = new Student({
 
   console.log(fred);
   fred.speak();
+  fred.standup("WebPT6");
  /*console.log(fred.catchphrase);
    console.log("Delphina replies to fred's catchphrase saying,"Word...What's good?");
   fred.grade("math");
