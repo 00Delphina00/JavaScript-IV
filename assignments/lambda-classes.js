@@ -37,7 +37,21 @@ const fred = new Instructor({
     specialty: 'Front-end',
     catchPhrase: `Don't forget the homies`
   });
+//Student class
+class Student extends Person {
+    constructor(newObjects){
+        super(newObjects);
+        this.previousBackground = newObjects.previousBackground;
+        this.favSubjects = newObjects.favSubjects;
+    };
+    listsSubjects(){
+        console.log(`${this.name}'s favorite subjects are ${this.favSubjects}.`);
+    }
+}
 
+  console.log(fred);
   fred.speak();
   fred.demo("math");
   fred.grade("math");
+  console.log(fred.catchPhrase);
+  console.log(`Delphina replies saying, "Word.......What's good?"`);
