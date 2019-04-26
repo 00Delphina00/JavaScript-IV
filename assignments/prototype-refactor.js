@@ -50,8 +50,7 @@ class CharacterStats2 extends CharacterStats{
          super(charStats);
      }
 }
-const Nami = new CharacterStats2({name:"Nami", healthPoints: 150});
-console.log(`Nami has ${Nami.healthPoints} health points + ${Nami.takeDamage()}`);
+
 /*
 === Humanoid (Having an appearance or character resembling that of a human.) ===
 * team
@@ -61,7 +60,7 @@ console.log(`Nami has ${Nami.healthPoints} health points + ${Nami.takeDamage()}`
 * should inherit destroy() from GameObject through CharacterStats
 * should inherit takeDamage() from CharacterStats
 */
-/*
+
 function Humanoid (attributes){
 CharacterStats.call(this, attributes);
 this.team = attributes.team;
@@ -73,7 +72,14 @@ return `${this.name} offers a greeting in ${this.language}`;
 }
 Humanoid.prototype = Object.create(CharacterStats.prototype);
 
+class Humanoid2 extends Humanoid {
+    constructor(attributes){
+        super(attributes);
 
+    }
+}
+const Nami = new Humanoid2({name:"Nami", healthPoints:100,language:"Ancient Sumerian"});
+console.log(Nami.takeDamage() + Nami.greet());
 /*
 * Inheritance chain: GameObject -> CharacterStats -> Humanoid
 * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
