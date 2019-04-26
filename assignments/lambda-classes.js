@@ -47,7 +47,8 @@ class Student extends Person {
         console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
 }
-
+//to test change the class name on new for the fred object and quote out
+// any methods that the changed class does not have.
 const fred = new Student({
     name: 'Fred',
     location: 'Bedrock',
@@ -63,6 +64,10 @@ const fred = new Student({
 
   console.log(fred);
   fred.speak();
+ /*console.log(fred.catchphrase);
+   console.log("Delphina replies to fred's catchphrase saying,"Word...What's good?");
+  fred.grade("math");
+  fred.demo("math"); 
   fred.listsSubjects();
   fred.PRAssignment("math");
-  fred.sprintChallenge("Array Methods");
+  fred.sprintChallenge("Array Methods");*/
